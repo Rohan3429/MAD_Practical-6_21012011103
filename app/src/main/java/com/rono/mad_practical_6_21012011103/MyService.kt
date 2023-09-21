@@ -1,38 +1,37 @@
-package com.example.mad_practical_6_21012011103
-
+package com.rono.mad_practical_6_21012011103
 
 import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
-import com.rono.mad_practical_6_21012011103.R
 
 class MyService : Service() {
-
-    lateinit var player : MediaPlayer
+    lateinit var player: MediaPlayer
     companion object{
         val PLAYERKEY="Service"
-        val PLAYERVALUE="Play/Pause"
+        val PLAYERVALUE="play/Pause"
     }
+
     override fun onBind(intent: Intent): IBinder {
         TODO("Return the communication channel to the service.")
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if(!this::player.isInitialized){
-            player = MediaPlayer.create(this, R.raw.song)
+            player= MediaPlayer.create(this, R.raw.song)
         }
-
         if(intent!=null){
-            val datavalue = intent.getStringExtra(PLAYERKEY)
-            if(datavalue == PLAYERVALUE){
+            val dataValue=intent.getStringExtra(PLAYERKEY)
+            if (dataValue== PLAYERVALUE){
                 if(!player.isPlaying){
                     player.start()
-                }else{
+                }
+                else{
                     player.pause()
                 }
             }
-        }else{
+        }
+        else{
             player.stop()
         }
         return START_STICKY
