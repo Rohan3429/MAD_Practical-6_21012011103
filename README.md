@@ -26,4 +26,5 @@ Foreground services are used when an app needs to perform a task that the user i
 
  client-server interface that allows components(Activity, content provider and service can bind to the Bound service) to interact with the service, send requests, receive results, and even do so across processes with interprocess communication (IPC).  no own lifecycle
 
-![image](https://github.com/Rohan3429/MAD_Practical-6_21012011103_1/assets/98172369/bda08174-7ded-4b37-ae06-06f066bfd2f6)
+![WhatsApp Image 2023-10-01 at 14 40 33](https://github.com/Rohan3429/MAD_Practical-6_21012011103/assets/98172369/967bbb90-516b-42d4-8968-44430d49643f)
+
